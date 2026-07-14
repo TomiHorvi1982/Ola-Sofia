@@ -1,0 +1,6 @@
+{
+  "name": "Moje první španělština",
+  "description": "Kapesní průvodce Málagou pro desetiletou cestovatelku Sofii. Obsahuje slovíčka, výslovnost s nahrávkami, kvízy, tipy na výlety a tiskovou verzi.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

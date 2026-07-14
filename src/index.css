@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Quicksand:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Quicksand", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fredoka", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-brand-pink: #ff85a1;
+  --color-brand-yellow: #fec85c;
+  --color-brand-blue: #4cc9f0;
+  --color-brand-teal: #4895ef;
+  
+  --color-cyber-bg: #030509;
+  --color-cyber-card: rgba(255, 255, 255, 0.05);
+  --color-cyber-border: rgba(255, 255, 255, 0.1);
+  --color-cyber-cyan: #00F2FF;
+  --color-cyber-orange: #FF4E00;
+  --color-cyber-gold: #FFB800;
+  --color-cyber-text: #E0E6ED;
+}
+
+/* Base style overrides to make it feel super immersive and high-tech */
+body {
+  font-family: var(--font-sans);
+  background-color: #030509;
+  color: #E0E6ED;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Custom scrollbars - Dark High-Tech Style */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 242, 255, 0.2);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 242, 255, 0.5);
+}
+
+/* Glow effects */
+.shadow-cyber-glow {
+  box-shadow: 0 0 15px rgba(0, 242, 255, 0.15);
+}
+.shadow-cyber-glow-strong {
+  box-shadow: 0 0 25px rgba(0, 242, 255, 0.35);
+}
+.shadow-orange-glow {
+  box-shadow: 0 0 15px rgba(255, 78, 0, 0.25);
+}
+.text-glow-cyan {
+  text-shadow: 0 0 8px rgba(0, 242, 255, 0.5);
+}
+.text-glow-orange {
+  text-shadow: 0 0 8px rgba(255, 78, 0, 0.5);
+}
+
+/* Hide scrollbars for simple clean lists */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Print custom rules for printing the A7 folding book (Leporelo) */
+@media print {
+  body {
+    background-color: white !important;
+    color: black !important;
+    font-size: 10pt !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-page {
+    display: block !important;
+    page-break-after: always;
+    width: 210mm;
+    height: 297mm;
+    padding: 10mm;
+    box-sizing: border-box;
+  }
+  .print-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-rows: repeat(4, 1fr) !important;
+    gap: 4mm !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .print-card {
+    border: 1px dashed #94a3b8 !important;
+    padding: 3mm !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    overflow: hidden !important;
+    height: 65mm !important;
+    background: white !important;
+    page-break-inside: avoid !important;
+  }
+}
