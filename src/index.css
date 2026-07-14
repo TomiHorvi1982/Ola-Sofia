@@ -122,20 +122,21 @@ body {
   .print-page-wrapper {
     display: block !important;
     width: 210mm !important;
-    height: 297mm !important;
+    height: auto !important;
     background: #ffffff !important;
     margin: 0 !important;
-    padding: 10mm !important;
+    padding: 0 !important;
     box-sizing: border-box !important;
-    page-break-after: avoid !important;
-    page-break-inside: avoid !important;
   }
 
   .print-page {
     display: block !important;
-    width: 100% !important;
-    height: 100% !important;
+    width: 210mm !important;
+    height: 297mm !important;
+    padding: 10mm !important;
     box-sizing: border-box !important;
+    page-break-after: always !important;
+    break-after: page !important;
   }
 
   .print-grid {
@@ -150,13 +151,13 @@ body {
 
   .print-card {
     border: 1px dashed #475569 !important;
-    padding: 4mm !important;
+    padding: 3mm !important;
     box-sizing: border-box !important;
     display: flex !important;
     flex-direction: column !important;
     justify-content: space-between !important;
     overflow: hidden !important;
-    height: 62mm !important;
+    height: 58mm !important;
     background: #ffffff !important;
     color: #000000 !important;
     page-break-inside: avoid !important;

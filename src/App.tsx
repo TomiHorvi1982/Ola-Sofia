@@ -304,164 +304,319 @@ export default function App() {
       </div>
 
       {/* Printable Paper Version — COMPLETELY HIDDEN ON SCREEN, REVEALED ON PRINT */}
-      <div className="hidden print:block print-page-wrapper font-sans text-black leading-relaxed" style={{ width: '210mm', height: '297mm' }}>
+      <div className="hidden print:block print-page-wrapper font-sans text-black leading-relaxed">
         
-        {/* A4 Folding Page (Leporelo 2x4 grid layout) */}
-        <div className="print-page">
-          <div className="text-center mb-4 border-b-2 border-dashed border-slate-300 pb-2">
-            <h1 className="text-xl font-extrabold text-slate-900">🇪🇸 MOJE PRVNÍ ŠPANĚLŠTINA — KAPESNÍ LEPÕRELO ☀️</h1>
-            <p className="text-xs font-bold text-slate-500">Skládací tahák do kapsy pro Sofii | Prázdniny v Málaze ☀️🏖️</p>
+        {/* A4 Folding Page 1 (Leporelo 2x4 grid layout - Strany 1-8) */}
+        <div className="print-page mb-8">
+          <div className="text-center mb-1 pb-0.5 border-b border-dashed border-slate-300">
+            <h2 className="text-[9px] font-extrabold text-slate-800">🇪🇸 MOJE PRVNÍ ŠPANĚLŠTINA — KAPESNÍ LEPÕRELO (LIST 1 Č. 1-8) ☀️</h2>
           </div>
 
-          <div className="print-grid grid grid-cols-2 gap-4">
+          <div className="print-grid grid grid-cols-2 gap-2">
             
             {/* Page 1: Obálka */}
-            <div className="print-card border border-dashed border-slate-400 p-3 flex flex-col justify-between h-[65mm] bg-white">
-              <div className="text-center space-y-1.5">
-                <span className="text-3xl">🌸🇪🇸☀️</span>
-                <h3 className="text-base font-extrabold text-slate-900 leading-tight">Moje první španělština</h3>
-                <p className="text-[10px] font-bold text-slate-500">Kapesní průvodce pro Sofii</p>
-                <p className="text-[9px] font-medium text-slate-600 bg-slate-100 p-1.5 rounded-md leading-relaxed">
-                  Pamatuj: 😊 Usmívej se, 🙋 Pozdrav (Hola!), ❤️ Neměj strach mluvit!
+            <div className="print-card border border-dashed border-slate-400 p-2.5 flex flex-col justify-between h-[58mm] bg-white text-slate-900">
+              <div className="text-center space-y-1">
+                <span className="text-2xl block">🌸🇪🇸☀️</span>
+                <h3 className="text-sm font-extrabold text-slate-900 leading-tight">Moje první španělština</h3>
+                <p className="text-[9px] font-bold text-slate-500">Kapesní průvodce pro Sofii 👸</p>
+                <p className="text-[8px] font-medium text-slate-700 bg-slate-100 p-1.5 rounded border border-slate-200 leading-relaxed">
+                  Pamatuj: 😊 Usmívej se, 🙋 Pozdrav (Hola!), ❤️ Neměj strach mluvit a užij si Málagu!
                 </p>
               </div>
-              <div className="text-center text-[8px] font-bold text-slate-400 border-t pt-1">Stránka 1 (Obálka)</div>
+              <div className="text-center text-[7.5px] font-bold text-slate-400 border-t pt-0.5">Stránka 1 (Obálka)</div>
             </div>
 
             {/* Page 2: O Málaze */}
-            <div className="print-card border border-dashed border-slate-400 p-3 flex flex-col justify-between h-[65mm] bg-white">
-              <div className="space-y-1.5">
-                <h4 className="text-xs font-bold text-slate-800 border-b pb-0.5">🌴 Málaga & Horko</h4>
-                <p className="text-[9px] leading-relaxed text-slate-600">
-                  Málaga leží na jihu Španělska (oblast Andalusie). Je tu Středozemní moře a 300+ slunečných dní v roce!
+            <div className="print-card border border-dashed border-slate-400 p-2.5 flex flex-col justify-between h-[58mm] bg-white text-slate-900">
+              <div className="space-y-1">
+                <h4 className="text-xs font-bold text-slate-800 border-b pb-0.5 flex justify-between">
+                  <span>🌴 Málaga & Španělsko</span>
+                  <span className="text-[9px]">🇪🇸</span>
+                </h4>
+                <p className="text-[7.5px] leading-tight text-slate-600">
+                  Málaga leží na jihu Španělska (Andalusie). Je tu Středozemní moře a 300+ slunečných dní v roce!
                 </p>
-                <div className="text-[8px] space-y-0.5 bg-slate-50 p-1 rounded-md border text-slate-700">
-                  <div>✔ <strong>Pij vodu:</strong> Pořád pij, slunce hřeje!</div>
-                  <div>✔ <strong>Klobouk:</strong> Vždy kšiltovku na hlavu.</div>
-                  <div>✔ <strong>Krém:</strong> Maž se vysokým faktorem!</div>
+                <div className="text-[7px] space-y-0.5 bg-slate-50 p-1 rounded border border-slate-150 text-slate-700">
+                  <div>💧 <strong>Pij vodu:</strong> Pořád pij, slunce hřeje!</div>
+                  <div>🧢 <strong>Klobouk:</strong> Vždy kšiltovku na hlavu.</div>
+                  <div>🧴 <strong>Krém:</strong> Pravidelně se maž SPF 50+.</div>
+                  <div>💶 <strong>Měna:</strong> Platí se zde eurem (€).</div>
                 </div>
               </div>
-              <div className="text-center text-[8px] font-bold text-slate-400 border-t pt-1">Stránka 2</div>
+              <div className="text-center text-[7.5px] font-bold text-slate-400 border-t pt-0.5">Stránka 2</div>
             </div>
 
             {/* Page 3: Výslovnost */}
-            <div className="print-card border border-dashed border-slate-400 p-3 flex flex-col justify-between h-[65mm] bg-white">
-              <div className="space-y-1.5">
+            <div className="print-card border border-dashed border-slate-400 p-2.5 flex flex-col justify-between h-[58mm] bg-white text-slate-900">
+              <div className="space-y-1">
                 <h4 className="text-xs font-bold text-slate-800 border-b pb-0.5">🗣️ Výslovnostní tahák</h4>
-                <p className="text-[8px] font-bold text-slate-500">Španělština se čte snadno, stačí znát:</p>
-                <div className="grid grid-cols-2 gap-x-2 gap-y-0.5 text-[8px] font-medium text-slate-700">
-                  <div>• H = nečte se</div>
+                <p className="text-[7.5px] font-bold text-slate-500">Španělština se čte snadno, stačí znát:</p>
+                <div className="grid grid-cols-2 gap-x-2 gap-y-0.5 text-[7px] font-medium text-slate-700">
+                  <div>• H = nečte se [ola]</div>
                   <div>• LL = J [jamo]</div>
-                  <div>• J = CH [chose]</div>
+                  <div>• J = CH [chamón]</div>
                   <div>• Ñ = Ň [espaňa]</div>
                   <div>• CH = Č [čurros]</div>
                   <div>• Q = K [keso]</div>
-                  <div>• C + E/I = S</div>
+                  <div>• C+E/I = S [sena]</div>
                   <div>• V = B [bamos]</div>
                 </div>
-                <div className="text-[7px] text-slate-500 bg-slate-50 p-1 rounded-md border">
-                  Příklad: <strong>Hola</strong> čti <em>ola</em>, <strong>Gracias</strong> čti <em>grasias</em>.
+                <div className="text-[7px] text-slate-500 bg-slate-50 px-1 py-0.5 rounded border border-slate-150 leading-tight">
+                  Příklad: <strong>Hola</strong> čti [ola], <strong>Gracias</strong> čti [grasias].
                 </div>
               </div>
-              <div className="text-center text-[8px] font-bold text-slate-400 border-t pt-1">Stránka 3</div>
+              <div className="text-center text-[7.5px] font-bold text-slate-400 border-t pt-0.5">Stránka 3</div>
             </div>
 
             {/* Page 4: Základní fráze */}
-            <div className="print-card border border-dashed border-slate-400 p-3 flex flex-col justify-between h-[65mm] bg-white">
-              <div className="space-y-1">
-                <h4 className="text-xs font-bold text-slate-800 border-b pb-0.5">🙋 Základní fráze</h4>
-                <div className="space-y-1 text-[8px] font-medium text-slate-700">
-                  <div>• <strong>Hola</strong> [ola] — Ahoj</div>
+            <div className="print-card border border-dashed border-slate-400 p-2.5 flex flex-col justify-between h-[58mm] bg-white text-slate-900">
+              <div className="space-y-0.5">
+                <h4 className="text-xs font-bold text-slate-800 border-b pb-0.5">👋 Základní fráze</h4>
+                <div className="space-y-0.5 text-[7.5px] font-medium text-slate-700">
+                  <div>• <strong>Hola</strong> [ola] — Ahoj / Dobrý den</div>
+                  <div>• <strong>Buenos días</strong> [buenos dýas] — Dobré ráno</div>
+                  <div>• <strong>Buenas tardes</strong> [buenas t.] — Dobré odpoledne</div>
+                  <div>• <strong>Buenas noches</strong> [buenas n.] — Dobrou noc</div>
                   <div>• <strong>Gracias</strong> [grasias] — Děkuji</div>
                   <div>• <strong>Por favor</strong> [por favor] — Prosím</div>
                   <div>• <strong>Adiós</strong> [adjos] — Nashledanou</div>
-                  <div>• <strong>Sí / No</strong> [sí/no] — Ano / Ne</div>
-                  <div>• <strong>Me llamo Sofie</strong> [me jamo] — Jmenuji se Sofie</div>
-                  <div>• <strong>¿Dónde está el baño?</strong> [donde esta el baňo] — Kde je WC?</div>
+                  <div>• <strong>Sí / No</strong> — Ano / Ne</div>
                 </div>
               </div>
-              <div className="text-center text-[8px] font-bold text-slate-400 border-t pt-1">Stránka 4</div>
+              <div className="text-center text-[7.5px] font-bold text-slate-400 border-t pt-0.5">Stránka 4</div>
             </div>
 
-            {/* Page 5: Na pláži & Restaurace */}
-            <div className="print-card border border-dashed border-slate-400 p-3 flex flex-col justify-between h-[65mm] bg-white">
-              <div className="space-y-1.5">
-                <h4 className="text-xs font-bold text-slate-800 border-b pb-0.5">🏖️ Pláž & Jídlo</h4>
-                <div className="grid grid-cols-2 gap-1 text-[8px] font-medium text-slate-700">
-                  <div>• <strong>Mar</strong> [mar] — Moře</div>
-                  <div>• <strong>Playa</strong> [plaja] — Pláž</div>
-                  <div>• <strong>Helado</strong> [elado] — Zmrzlina</div>
-                  <div>• <strong>Agua</strong> [agva] — Voda</div>
-                </div>
-                <div className="text-[8px] text-slate-700 border-t pt-1 leading-normal">
-                  • <strong>Quiero...</strong> [kjero] — Chci...<br />
-                  • <strong>el zumo</strong> [sumo] — džus<br />
-                  • <strong>la pizza</strong> [pica] — pizzu<br />
-                  • <strong>patatas fritas</strong> — hranolky
+            {/* Page 5: Seznámení & Potřeby */}
+            <div className="print-card border border-dashed border-slate-400 p-2.5 flex flex-col justify-between h-[58mm] bg-white text-slate-900">
+              <div className="space-y-0.5">
+                <h4 className="text-xs font-bold text-slate-800 border-b pb-0.5">🙋 Seznámení & Potřeby</h4>
+                <div className="space-y-0.5 text-[7px] font-medium text-slate-700">
+                  <div>• <strong>¿Cómo te llamas?</strong> [komo te jamas] — Jak se jmenuješ?</div>
+                  <div>• <strong>Me llamo Sofie.</strong> [me jamo] — Jmenuji se Sofie.</div>
+                  <div>• <strong>¿Dónde está el baño?</strong> [donde esta] — Kde je WC?</div>
+                  <div>• <strong>Tengo sed.</strong> [tengo sed] — Mám žízeň.</div>
+                  <div>• <strong>Tengo hambre.</strong> [tengo ambre] — Mám hlad.</div>
+                  <div>• <strong>¡Ayuda!</strong> [ajuda] — Pomoc!</div>
+                  <div>• <strong>Estoy perdida.</strong> [estoj perdida] — Ztratila jsem se.</div>
+                  <div>• <strong>Soy de Chequia.</strong> [soj de čekia] — Jsem z Česka.</div>
                 </div>
               </div>
-              <div className="text-center text-[8px] font-bold text-slate-400 border-t pt-1">Stránka 5</div>
+              <div className="text-center text-[7.5px] font-bold text-slate-400 border-t pt-0.5">Stránka 5</div>
             </div>
 
-            {/* Page 6: Čísla 1-20 */}
-            <div className="print-card border border-dashed border-slate-400 p-3 flex flex-col justify-between h-[65mm] bg-white">
+            {/* Page 6: Na pláži */}
+            <div className="print-card border border-dashed border-slate-400 p-2.5 flex flex-col justify-between h-[58mm] bg-white text-slate-900">
               <div className="space-y-1">
-                <h4 className="text-xs font-bold text-slate-800 border-b pb-0.5">🔢 Číslovky 0-20</h4>
-                <div className="grid grid-cols-2 gap-x-2 gap-y-0.5 text-[7px] font-mono font-bold text-slate-700">
+                <h4 className="text-xs font-bold text-slate-800 border-b pb-0.5">🏖️ Slovíčka na pláži</h4>
+                <div className="grid grid-cols-2 gap-x-2 gap-y-0.5 text-[7.5px] font-semibold text-slate-700">
+                  <div>• <strong>El mar</strong> — Moře</div>
+                  <div>• <strong>La playa</strong> — Pláž</div>
+                  <div>• <strong>La arena</strong> — Písek</div>
+                  <div>• <strong>El sol</strong> — Slunce</div>
+                  <div>• <strong>La toalla</strong> — Ručník</div>
+                  <div>• <strong>La ola</strong> — Vlna</div>
+                  <div>• <strong>Concha</strong> — Mušle</div>
+                  <div>• <strong>Gafas</strong> — Brýle</div>
+                </div>
+                <div className="text-[7px] text-slate-500 bg-slate-50 px-1 py-0.5 rounded border border-slate-150 leading-tight">
+                  🏖️ <strong>Pláž v Málaze:</strong> Jmenuje se <em>La Malagueta</em> a má super obří nápis z písku!
+                </div>
+              </div>
+              <div className="text-center text-[7.5px] font-bold text-slate-400 border-t pt-0.5">Stránka 6</div>
+            </div>
+
+            {/* Page 7: Čísla 0-10 */}
+            <div className="print-card border border-dashed border-slate-400 p-2.5 flex flex-col justify-between h-[58mm] bg-white text-slate-900">
+              <div className="space-y-1">
+                <h4 className="text-xs font-bold text-slate-800 border-b pb-0.5">🔢 Číslovky 0-10</h4>
+                <div className="grid grid-cols-2 gap-x-3 gap-y-0.5 text-[7.5px] font-mono font-bold text-slate-700">
                   <div>0: cero [sero]</div>
                   <div>1: uno [uno]</div>
                   <div>2: dos [dos]</div>
                   <div>3: tres [tres]</div>
                   <div>4: cuatro [kuatro]</div>
                   <div>5: cinco [sinko]</div>
+                  <div>6: seis [sejs]</div>
+                  <div>7: siete [sjete]</div>
+                  <div>8: ocho [očo]</div>
+                  <div>9: nueve [nuebe]</div>
                   <div>10: diez [djes]</div>
+                </div>
+              </div>
+              <div className="text-center text-[7.5px] font-bold text-slate-400 border-t pt-0.5">Stránka 7</div>
+            </div>
+
+            {/* Page 8: Čísla 11-20 */}
+            <div className="print-card border border-dashed border-slate-400 p-2.5 flex flex-col justify-between h-[58mm] bg-white text-slate-900">
+              <div className="space-y-1">
+                <h4 className="text-xs font-bold text-slate-800 border-b pb-0.5">🔢 Číslovky 11-20</h4>
+                <div className="grid grid-cols-2 gap-x-3 gap-y-0.5 text-[7.5px] font-mono font-bold text-slate-700">
                   <div>11: once [onse]</div>
                   <div>12: doce [dose]</div>
+                  <div>13: trece [trese]</div>
+                  <div>14: catorce [katorse]</div>
                   <div>15: quince [kinse]</div>
+                  <div>16: dieciséis [djesiséjs]</div>
+                  <div>17: diecisiete [djesisjete]</div>
+                  <div>18: dieciocho [djesisočo]</div>
+                  <div>19: diecinueve [djesisnuebe]</div>
                   <div>20: veinte [bejnte]</div>
                 </div>
               </div>
-              <div className="text-center text-[8px] font-bold text-slate-400 border-t pt-1">Stránka 6</div>
-            </div>
-
-            {/* Page 7: Barvy & Zvířata */}
-            <div className="print-card border border-dashed border-slate-400 p-3 flex flex-col justify-between h-[65mm] bg-white">
-              <div className="space-y-1.5">
-                <h4 className="text-xs font-bold text-slate-800 border-b pb-0.5">🎨 Barvy & 🐱 Zvířátka</h4>
-                <div className="grid grid-cols-2 gap-x-2 gap-y-0.5 text-[8px] font-semibold text-slate-700">
-                  <div>🔴 Rojo [rocho] — červená</div>
-                  <div>🔵 Azul [asul] — modrá</div>
-                  <div>🟢 Verde [verde] — zelená</div>
-                  <div>🟡 Amarillo — žlutá</div>
-                </div>
-                <div className="grid grid-cols-2 gap-x-2 gap-y-0.5 text-[8px] font-semibold text-slate-700 border-t pt-1.5">
-                  <div>🐶 perro — pes</div>
-                  <div>🐱 gato — kočka</div>
-                  <div>🐴 caballo — kůň</div>
-                  <div>🐟 pez — ryba</div>
-                </div>
-              </div>
-              <div className="text-center text-[8px] font-bold text-slate-400 border-t pt-1">Stránka 7</div>
-            </div>
-
-            {/* Page 8: Slang & Tipy */}
-            <div className="print-card border border-dashed border-slate-400 p-3 flex flex-col justify-between h-[65mm] bg-white">
-              <div className="space-y-1">
-                <h4 className="text-xs font-bold text-slate-800 border-b pb-0.5">😎 Slang & Výlety</h4>
-                <div className="space-y-0.5 text-[8px] text-slate-700">
-                  <div>• <strong>¡Qué guay!</strong> [ke gvaj] — To je super!</div>
-                  <div>• <strong>Vale</strong> [bale] — Dobře / Ok</div>
-                  <div>• <strong>¡Vamos!</strong> [bamos] — Jdeme!</div>
-                </div>
-                <div className="text-[7.5px] text-slate-600 bg-slate-50 p-1.5 rounded-md border mt-1 font-medium leading-tight">
-                  🐾 <strong>Výlety:</strong> Pláž La Malagueta, Sea Life Benalmádena, hrad Gibralfaro, Bioparc.
-                </div>
-              </div>
-              <div className="text-center text-[8px] font-bold text-slate-400 border-t pt-1">Stránka 8</div>
+              <div className="text-center text-[7.5px] font-bold text-slate-400 border-t pt-0.5">Stránka 8</div>
             </div>
 
           </div>
         </div>
+
+        {/* A4 Folding Page 2 (Leporelo 2x4 grid layout - Strany 9-16) */}
+        <div className="print-page">
+          <div className="text-center mb-1 pb-0.5 border-b border-dashed border-slate-300">
+            <h2 className="text-[9px] font-extrabold text-slate-800">🇪🇸 MOJE PRVNÍ ŠPANĚLŠTINA — KAPESNÍ LEPÕRELO (LIST 2 Č. 9-16) ☀️</h2>
+          </div>
+
+          <div className="print-grid grid grid-cols-2 gap-2">
+            
+            {/* Page 9: Co ochutnat */}
+            <div className="print-card border border-dashed border-slate-400 p-2.5 flex flex-col justify-between h-[58mm] bg-white text-slate-900">
+              <div className="space-y-1">
+                <h4 className="text-xs font-bold text-slate-800 border-b pb-0.5">🥘 Jídlo - Co ochutnat?</h4>
+                <div className="space-y-0.5 text-[7px] font-semibold text-slate-700 leading-tight">
+                  <div>🍦 <strong>Helado</strong> [elado] — Obří kopečky zmrzliny!</div>
+                  <div>🍩 <strong>Churros</strong> [čurros] — Sladké tyčinky s čokoládou.</div>
+                  <div>🥘 <strong>Paella</strong> [paeja] — Žlutá rýže se šafránem a kuřetem.</div>
+                  <div>🥪 <strong>Bocadillo</strong> [bokadijo] — Plněná bageta (šunka/sýr).</div>
+                  <div>🍉 <strong>Melón</strong> — Super sladký žlutý meloun na pláž.</div>
+                  <div>🐟 <strong>Espeto</strong> — Sardinky opékané na klacku v písku.</div>
+                </div>
+              </div>
+              <div className="text-center text-[7.5px] font-bold text-slate-400 border-t pt-0.5">Stránka 9</div>
+            </div>
+
+            {/* Page 10: V restauraci */}
+            <div className="print-card border border-dashed border-slate-400 p-2.5 flex flex-col justify-between h-[58mm] bg-white text-slate-900">
+              <div className="space-y-1">
+                <h4 className="text-xs font-bold text-slate-800 border-b pb-0.5">🍦 V restauraci</h4>
+                <div className="space-y-0.5 text-[7.5px] font-medium text-slate-700">
+                  <div>• <strong>Quiero...</strong> [kjero...] — Chci... / Můžu dostat...</div>
+                  <div>• <strong>el zumo</strong> [sumo] — džus</div>
+                  <div>• <strong>la pizza</strong> [pica] — pizzu</div>
+                  <div>• <strong>el pollo</strong> [pojo] — kuře</div>
+                  <div>• <strong>patatas fritas</strong> — hranolky</div>
+                  <div>• <strong>¿Cuánto cuesta?</strong> [kuanto kuesta] — Kolik to stojí?</div>
+                  <div>• <strong>La cuenta, por favor.</strong> [la kuenta] — Účet, prosím.</div>
+                </div>
+              </div>
+              <div className="text-center text-[7.5px] font-bold text-slate-400 border-t pt-0.5">Stránka 10</div>
+            </div>
+
+            {/* Page 11: Barvy */}
+            <div className="print-card border border-dashed border-slate-400 p-2.5 flex flex-col justify-between h-[58mm] bg-white text-slate-900">
+              <div className="space-y-1">
+                <h4 className="text-xs font-bold text-slate-800 border-b pb-0.5">🎨 Barvy (Colores)</h4>
+                <div className="grid grid-cols-2 gap-x-2 gap-y-0.5 text-[7.5px] font-semibold text-slate-700">
+                  <div>🔴 <strong>Rojo</strong> [rocho] — červená</div>
+                  <div>🔵 <strong>Azul</strong> [asul] — modrá</div>
+                  <div>🟢 <strong>Verde</strong> — zelená</div>
+                  <div>🟡 <strong>Amarillo</strong> — žlutá</div>
+                  <div>⚪ <strong>Blanco</strong> — bílá</div>
+                  <div>⚫ <strong>Negro</strong> — černá</div>
+                  <div>🟤 <strong>Marrón</strong> — hnědá</div>
+                  <div>🟠 <strong>Naranja</strong> — oranžová</div>
+                </div>
+              </div>
+              <div className="text-center text-[7.5px] font-bold text-slate-400 border-t pt-0.5">Stránka 11</div>
+            </div>
+
+            {/* Page 12: Zvířátka */}
+            <div className="print-card border border-dashed border-slate-400 p-2.5 flex flex-col justify-between h-[58mm] bg-white text-slate-900">
+              <div className="space-y-0.5">
+                <h4 className="text-xs font-bold text-slate-800 border-b pb-0.5">🐱 Zvířátka (Animales)</h4>
+                <div className="grid grid-cols-2 gap-x-2 gap-y-0.5 text-[7.5px] font-semibold text-slate-700">
+                  <div>🐶 <strong>perro</strong> — pes</div>
+                  <div>🐱 <strong>gato</strong> — kočka</div>
+                  <div>🐴 <strong>caballo</strong> [kabajo] — kůň</div>
+                  <div>🐟 <strong>pez</strong> [pes] — ryba</div>
+                  <div>🐦 <strong>pájaro</strong> [pacharo] — pták</div>
+                  <div>🐢 <strong>tortuga</strong> — želva</div>
+                  <div>🐬 <strong>delfín</strong> — delfín</div>
+                  <div>🦜 <strong>papagayo</strong> — papoušek</div>
+                </div>
+              </div>
+              <div className="text-center text-[7.5px] font-bold text-slate-400 border-t pt-0.5">Stránka 12</div>
+            </div>
+
+            {/* Page 13: Slang */}
+            <div className="print-card border border-dashed border-slate-400 p-2.5 flex flex-col justify-between h-[58mm] bg-white text-slate-900">
+              <div className="space-y-1">
+                <h4 className="text-xs font-bold text-slate-800 border-b pb-0.5">😎 Andaluský slang</h4>
+                <p className="text-[7.5px] text-slate-500 font-bold">Mluv v Málaze jako místní star!</p>
+                <div className="space-y-0.5 text-[7px] font-semibold text-slate-700 leading-snug">
+                  <div>• <strong>¡Qué guay!</strong> [ke gvaj] — To je super / cool!</div>
+                  <div>• <strong>Vale</strong> [bale] — Dobře / Ok / Beru.</div>
+                  <div>• <strong>¡Vamos!</strong> [bamos] — Jdeme! / Pojďme!</div>
+                  <div>• <strong>Chulo</strong> [čulo] — Hezké / Pěkné.</div>
+                  <div>• <strong>Guapo/a</strong> [guapo] — Krásný/á / Fešák.</div>
+                  <div>• <strong>No ni ná</strong> [no ni na] — No jasně! / A jak by ne!</div>
+                </div>
+              </div>
+              <div className="text-center text-[7.5px] font-bold text-slate-400 border-t pt-0.5">Stránka 13</div>
+            </div>
+
+            {/* Page 14: Desatero */}
+            <div className="print-card border border-dashed border-slate-400 p-2.5 flex flex-col justify-between h-[58mm] bg-white text-slate-900">
+              <div className="space-y-1">
+                <h4 className="text-xs font-bold text-slate-800 border-b pb-0.5">🎒 Desatero na cesty</h4>
+                <div className="space-y-0.5 text-[6.5px] font-medium text-slate-700 leading-tight">
+                  <div>1. Vždy pozdrav s úsměvem: <strong>„Hola!“</strong>.</div>
+                  <div>2. Za vše poděkuj: <strong>„Gracias“</strong>.</div>
+                  <div>3. Neboj se mluvit, i s chybami ti pomohou.</div>
+                  <div>4. Pij hodně čisté studené vody.</div>
+                  <div>5. Nos klobouk, kšiltovku a sluneční brýle.</div>
+                  <div>6. Hlídej si batůžek a mobil v davu lidí.</div>
+                  <div>7. Poslouchej rodiče a drž se jich.</div>
+                  <div>8. Ztracená stůj na místě! Popros policii o pomoc.</div>
+                </div>
+              </div>
+              <div className="text-center text-[7.5px] font-bold text-slate-400 border-t pt-0.5">Stránka 14</div>
+            </div>
+
+            {/* Page 15: Výlety */}
+            <div className="print-card border border-dashed border-slate-400 p-2.5 flex flex-col justify-between h-[58mm] bg-white text-slate-900">
+              <div className="space-y-1">
+                <h4 className="text-xs font-bold text-slate-800 border-b pb-0.5">🎡 Super výlety v Málaze</h4>
+                <div className="space-y-0.5 text-[6.8px] font-semibold text-slate-700 leading-tight">
+                  <div>🏰 <strong>Hrad Gibralfaro:</strong> Pevnost s výhledem a papoušky.</div>
+                  <div>🏖️ <strong>Pláž La Malagueta:</strong> Koupání a obří pískový nápis.</div>
+                  <div>🐠 <strong>Sea Life:</strong> Obří podmořský tunel s rejnoky.</div>
+                  <div>🐒 <strong>Bioparc Fuengirola:</strong> Zoo jako deštný prales.</div>
+                  <div>🎢 <strong>Aqualand Torremolinos:</strong> Skluzavky a tobogány.</div>
+                  <div>🛍️ <strong>Calle Larios:</strong> Nádherná pěší zóna plná zmrzliny.</div>
+                </div>
+              </div>
+              <div className="text-center text-[7.5px] font-bold text-slate-400 border-t pt-0.5">Stránka 15</div>
+            </div>
+
+            {/* Page 16: Diplom */}
+            <div className="print-card border border-dashed border-slate-400 p-2 flex flex-col justify-between h-[58mm] bg-white text-slate-900">
+              <div className="text-center space-y-0.5">
+                <span className="text-xl block">🏆⭐🤴</span>
+                <h5 className="text-[9px] font-black text-amber-600 tracking-wider">Cestovatelský diplom</h5>
+                <h4 className="text-[10px] font-extrabold text-slate-900 leading-tight">Sofi — Královna Málagy</h4>
+                <div className="text-[6.5px] font-bold text-slate-700 space-y-0.5 bg-amber-50/50 p-1 rounded border border-amber-200 text-left">
+                  <div>☐ Snědla jsem aspoň 5 zmrzlin 🍦</div>
+                  <div>☐ Koupala se v moři a stavěla hrady 🏖️</div>
+                  <div>☐ Sama jsem španělsky objednala jídlo 🙋</div>
+                  <div>☐ Umím španělsky počítat do 10! 🔢</div>
+                </div>
+              </div>
+              <div className="text-center text-[7.5px] font-bold text-slate-400 border-t pt-0.5">Stránka 16 (Diplom)</div>
+            </div>
+
+          </div>
+        </div>
+
       </div>
       
     </div>
