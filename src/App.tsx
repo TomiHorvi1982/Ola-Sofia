@@ -304,7 +304,7 @@ export default function App() {
       </div>
 
       {/* Printable Paper Version — COMPLETELY HIDDEN ON SCREEN, REVEALED ON PRINT */}
-      <div className="hidden print:block font-sans text-black leading-relaxed" style={{ width: '210mm', height: '297mm' }}>
+      <div className="hidden print:block print-page-wrapper font-sans text-black leading-relaxed" style={{ width: '210mm', height: '297mm' }}>
         
         {/* A4 Folding Page (Leporelo 2x4 grid layout) */}
         <div className="print-page">

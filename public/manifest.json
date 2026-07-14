@@ -1,0 +1,18 @@
+{
+  "short_name": "Španělština",
+  "name": "Moje první španělština",
+  "description": "Kapesní průvodce Málagou pro desetiletou cestovatelku Sofii. Obsahuje slovíčka, výslovnost s nahrávkami, kvízy, tipy na výlety.",
+  "icons": [
+    {
+      "src": "/icon.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#0a0a0a",
+  "theme_color": "#0a0a0a",
+  "display": "standalone",
+  "orientation": "portrait"
+}

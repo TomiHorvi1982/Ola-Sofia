@@ -72,40 +72,97 @@ body {
 
 /* Print custom rules for printing the A7 folding book (Leporelo) */
 @media print {
-  body {
-    background-color: white !important;
-    color: black !important;
-    font-size: 10pt !important;
+  /* Reset HTML and Body so they do not clip or hide printing contents */
+  html, body {
+    background-color: #ffffff !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+    width: 210mm !important;
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
   }
-  .no-print {
+
+  /* Reset the application root container from flex-centering and hidden overflow */
+  #root,
+  #root > div,
+  .min-h-screen,
+  main {
+    display: block !important;
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    width: 210mm !important;
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+    position: static !important;
+    inset: auto !important;
+    transform: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* Explicitly hide screen elements, mockups, headers, background grids, glowing circles */
+  .print\:hidden,
+  [class*="print:hidden"],
+  .absolute,
+  .pointer-events-none,
+  header,
+  nav,
+  button,
+  #speech-toggle-btn {
     display: none !important;
   }
+
+  /* Force print wrapper to display */
+  .print-page-wrapper {
+    display: block !important;
+    width: 210mm !important;
+    height: 297mm !important;
+    background: #ffffff !important;
+    margin: 0 !important;
+    padding: 10mm !important;
+    box-sizing: border-box !important;
+    page-break-after: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
   .print-page {
     display: block !important;
-    page-break-after: always;
-    width: 210mm;
-    height: 297mm;
-    padding: 10mm;
-    box-sizing: border-box;
+    width: 100% !important;
+    height: 100% !important;
+    box-sizing: border-box !important;
   }
+
   .print-grid {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr) !important;
     grid-template-rows: repeat(4, 1fr) !important;
     gap: 4mm !important;
     width: 100% !important;
-    height: 100% !important;
+    height: calc(100% - 15mm) !important;
+    box-sizing: border-box !important;
   }
+
   .print-card {
-    border: 1px dashed #94a3b8 !important;
-    padding: 3mm !important;
+    border: 1px dashed #475569 !important;
+    padding: 4mm !important;
     box-sizing: border-box !important;
     display: flex !important;
     flex-direction: column !important;
     justify-content: space-between !important;
     overflow: hidden !important;
-    height: 65mm !important;
-    background: white !important;
+    height: 62mm !important;
+    background: #ffffff !important;
+    color: #000000 !important;
     page-break-inside: avoid !important;
+  }
+
+  .print-card * {
+    color: #000000 !important;
   }
 }
